@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if f %}
+
+<img src="/static/{{f}}" alt="nate" class="input-cropped-image"/>
+{% endif %}
+
+<div class="container">
+{% for path in c %}
+    <img src="/static/{{path}}" alt="nate" class="cropped-image"/>
+{% endfor %}
+</div>
+
+<div class="container rec-text">
+  <p>Wouldn't you look great in these? ♡</p>
+</div>
+
+
+<div class="container">
+  
+      {% for column in [0,1,2,3,4] %}
+      <div class="columns">
+        {% for product in products[column::5] %}
+        <div class="column"> 
+
+          <div class="container">
+              <figure class="image is-2by3">
+                <img src="https://{{ product.imageURL }}">
+              </figure>
+
+              <div>
+                <p class="product-text product-brand">{{ product.brand }}</h3>
+              </div>
+
+              <div class="container product-title">
+                <p class="product-text">{{ product.name }}</h3>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <p class="product-text price">{{ product.price }}</p>
+                </div>
+
+                <div class="column">
+                  <a class="button is-info is-light shop-now" target="_blank" href="{{product.hrefs}}"> Shop now!</a>
+                </div>
+
+              </div>
+          </div>
+          <br>
+        </div>
+        {% endfor %}
+
+        </div>
+      {% endfor %}
+
+      </div>
+
+      <div class="container">
+        <a class="button is-info back-button" href="/still">Show me something else! ♡</a>
+      </div>
+     
+
+{% endblock %}

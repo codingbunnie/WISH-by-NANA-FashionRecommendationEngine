@@ -1,0 +1,153 @@
+body {
+    font-family: 'Overpass',sans-serif !important;
+}
+
+.navigation {
+    background-color: rgb(93,188,210) !important;
+}
+
+.nav-text {
+    margin-top: 2px;
+    margin-bottom: -2px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.bg-img { 
+    background: url(/../../static/images/background.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+
+}
+
+.shoot-show {
+    margin-top: 350px;
+    margin-left: 500px;
+    padding-right: 100px;
+    /* margin-right: 300px; */
+}
+
+.shoot-button {
+    font-size: 30px;
+}
+
+.show-button {
+    font-size: 30px;
+}
+
+
+.input-image {
+    width: 500px;
+    height: auto;
+    padding-top: 30px;
+}
+
+.input-cropped-image {
+    height: 300px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.cropped-image {
+    width: 100px;
+}
+
+.rec-text {
+    color: #000 !important;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: 'Lora',sans-serif,Verdana,'Nanum Gothic' !important;
+    line-height: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dec-text {
+    color: #000 !important;
+    font-weight: normal;
+    font-size: 30px;
+    font-family: 'Lora',sans-serif,Verdana,'Nanum Gothic' !important;
+    line-height: 18px;
+    padding-bottom: 5px;
+}
+
+.product-title{
+    padding-left: 0px !important;
+    margin: 0px !important;
+    height: 70px;
+}
+
+.product-brand{
+    color: rgb(239,183,192) !important;
+    padding-left: 0px !important;
+    margin-bottom: 0rem !important;
+    font-style: italic;
+}
+
+.product-text {
+    font-family: 'NanumBarunGothic',sans-serif;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #555555;
+    text-align: left;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.shop-now {
+    font-size: 0.8rem;
+}
+
+
+.cropped-image {
+    width: 200px;
+    height: 300px;
+}
+
+.recommendation {
+    margin-top: 50px;
+    height: 300px;
+}
+
+.cropped-image {
+    height: 250px !important;
+    width: auto !important;
+    margin: auto
+}
+
+.category {
+    color: #000 !important;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: 'Lora',sans-serif,Verdana,'Nanum Gothic' !important;
+    line-height: 18px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+    text-transform: capitalize;
+}
+
+.back-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    /* background-color: rgb(239,183,192); */
+}
+
+.camera {
+    padding-top: 30px;
+}
+
+
+.wish-camera {
+    padding-top: 30px;
+}

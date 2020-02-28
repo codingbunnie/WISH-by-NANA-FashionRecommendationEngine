@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hero-body">
+
+        <div class="container" style="position: relative; padding-left:0;">
+
+            {% if f %}
+
+            <div class="container dec-text">
+                <p> Lookin' good!</p>
+            </div>
+
+            <img src="{{f}}" class="input-image">
+
+            {% else %}
+           
+            <img src="{{ url_for('home.videoFeed') }}" class="camera">
+
+            <form action="/video#wish" method="POST" class="wish-camera">
+                <button type="submit" class="button is-info is-light" style="margin-left: 30px !important;"> Wish! </button>
+            </form>
+    
+            {% endif %} 
+
+            
+        </div>
+
+ 
+
+{% if f %}
+
+    {% if c %}
+    <div id="wish" class="container" style="margin-bottom: 50px;">
+        <div class="tile is-ancester">
+        {% for column in [0,1,2] %}
+        <div class="tile is-parent is-4 is-vertical">
+            <div class="tile is-child"> 
+            {% for object in c[column::3] %}
+            <div class='recommendation'>
+        
+            <figure class="image">
+                <img class="cropped-image"" src="/static/{{object.path}}" onerror="this.src='static/images/placeholder.jpg'">
+            </figure>
+
+            
+                <p class="category">{{ object.category }}</p>
+            
+            
+                <form action="{{url_for('home.recommend', category=object.category, path=object.path )}}" method="POST">
+                    <button class="button is-info is-light" type="submit">See Recommendations</button>
+                </form>
+            
+            </div>
+            <br>
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    {% else %}
+        <h2>Can't detect. Try again.</h2>
+
+    {% endif %}
+
+    <form action="/video"   enctype="multipart/form-data" method="GET">
+
+        <div class="file has-name is-centered">
+ 
+              <button type="submit" class="button is-info back-button" style="margin-left: 30px !important;"> Make another wish! </button>
+
+            </label>
+        </div>
+
+    </form>
+    
+{% endif %}
+
+</div>
+
+  
+
+</div>
+{% endblock %}
