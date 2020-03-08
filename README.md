@@ -3,7 +3,7 @@
 
 **WISH** is a machine-learning powered fashion recommendation engine which allow users to input any JPG or JPEG photo of clothing items and receive recommendations for visually similar items (and where to buy them). It works using **Object Detection** with **YOLO V3**, **Feature Extraction** with **Inception V3** in conjunction with **K-Nearest Neighbor**. 
 
-Proposed Applications: 
+Proposed Business Applications: 
 
 - SHOPS: Instant Item Retrieval 
 - SHOPPERS: Instant Shop-the-Look Solution
@@ -21,6 +21,8 @@ A - SHOW Mode:
 In SHOW, users upload a picture (JPG or JPEG format) - the built-in YOLO function will apply preprocessing onto the image & feed it to the model as an input. The output will be a number of prediction (0 - the number of detected item) with bounding boxes drawn around the detected clothing item. There are 5 labels: Top, Trousers, Skirt, Shorts and Dress. The bounding box will be accompanied by the prediction label (one of five). 
 
 ![](https://i.imgur.com/fr8KJhU.jpg)
+![](https://i.imgur.com/SS4I10b.jpg)
+
 
 B - SHOOT Mode: 
 
